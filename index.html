@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/locomotive-scroll.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Walking Deadpool</title>
+</head>
+
+<body>
+    <div data-scroll-container class="scroll-container">
+        <div data-scroll-section class="page page-one">
+            <div class="title" data-scroll data-scroll-speed="5" data-scroll-direction="horizontal">
+                <div class="bee"></div>
+            </div>
+            <div class="sign" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+                <img src="img/start.png">
+            </div>
+        </div>
+        <div data-scroll-section class="page page-two">
+            <div class="title offset" data-scroll data-scroll-speed="-5" data-scroll-direction="horizontal">
+                <div class="bee right"></div>
+            </div>
+            <div class="rock" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+                <img src="img/rock_one.png">
+            </div>
+
+        </div>
+        <div data-scroll-section class="page page-three">
+            <div class="title" data-scroll data-scroll-speed="5" data-scroll-direction="horizontal">
+                <div class="bee"></div>
+            </div>
+
+        </div>
+        <div data-scroll-section class="page page-four">
+            <div class="title offset" data-scroll data-scroll-speed="-5" data-scroll-direction="horizontal">
+                <div class="bee right"></div>
+            </div>
+            <div class="rock" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+                <img src="img/rock_two.png">
+            </div>
+
+        </div>
+        <div data-scroll-section class="page page-five">
+            <div class="title" data-scroll data-scroll-speed="5" data-scroll-direction="horizontal">
+                <div class="bee"></div>
+            </div>
+        </div>
+        <div data-scroll-section class="page page-six">
+            <div class="title offset" data-scroll data-scroll-speed="-5" data-scroll-direction="horizontal">
+                <div class="bee right"></div>
+            </div>
+
+        </div>
+        <div data-scroll-section class="page page-seven">
+            <div class="title" data-scroll data-scroll-speed="5" data-scroll-direction="horizontal">
+                <div class="bee"></div>
+            </div>
+            <div class="rock" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+                <img src="img/rock_three.png">
+            </div>
+
+        </div>
+        <div data-scroll-section class="page page-eight">
+            <div class="title offset" data-scroll data-scroll-speed="-5" data-scroll-direction="horizontal">
+                <div class="bee right"></div>
+            </div>
+            <div class="sign" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+                <img src="img/finish.png">
+            </div>
+
+        </div>
+    </div>
+    <div class="road-container">
+        <div class="road">
+
+        </div>
+        <div class="markings">
+
+        </div>
+    </div>
+    <div class="character-container">
+
+        <div class="character idle" id="char"></div>
+    </div>
+    <script src="js/locomotive-scroll.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

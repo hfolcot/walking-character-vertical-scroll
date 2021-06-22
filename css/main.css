@@ -1,0 +1,190 @@
+html body {
+  position: relative;
+  margin: 0;
+  background: radial-gradient(#ffffff 0%, #d1ddcd 100%);
+  pointer-events: none;
+}
+html body .scroll-container {
+  min-height: 100vh;
+}
+html body .page {
+  min-height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+html body .page .title {
+  width: 50%;
+  text-align: center;
+  margin-top: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .page .title.offset {
+  margin-left: 50%;
+}
+html body .page .title .bee {
+  background-image: url('../img/bee.png');
+  width: 50px;
+  height: 50px;
+  background-size: 600%;
+  background-repeat: repeat-x;
+  animation: fly 250ms steps(6) infinite;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  z-index: 1;
+}
+html body .page .title .bee.right {
+  transform: rotateY(180deg);
+}
+html body .page .sign img {
+  max-width: 10%;
+  margin-left: 25%;
+}
+html body .page .rock img {
+  max-width: 10%;
+  margin-left: 75%;
+}
+html body .road-container {
+  position: fixed;
+  height: 100vh;
+  width: 30%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: -1;
+}
+html body .road-container .road {
+  height: 100%;
+  background-color: grey;
+  width: 100%;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  pointer-events: none;
+}
+html body .road-container .markings {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  background-image: url('../img/road.png');
+  background-size: 50% 200%;
+  background-position: center 0;
+  background-repeat: repeat-y;
+  pointer-events: none;
+}
+html body .road-container .markings.moving {
+  animation: road 4s infinite linear;
+}
+html body .road-container .markings.moving.back {
+  animation-direction: reverse;
+}
+html body .character-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+}
+html body .character-container #char {
+  background-image: url('../img/char.png');
+  height: 192px;
+  width: 128px;
+  background-size: 512px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  pointer-events: none;
+}
+html body .character-container #char.idle {
+  animation: none;
+}
+html body .character-container #char.walk {
+  animation: walk 1s steps(4) infinite;
+}
+html body .character-container #char.walkback {
+  background-position: 0 -576px;
+  animation: walkback 1s steps(4) infinite;
+}
+@keyframes walk {
+  100% {
+    background-position: -512px 0;
+  }
+}
+@-moz-keyframes walk {
+  100% {
+    background-position: -512px 0;
+  }
+}
+@-webkit-keyframes walk {
+  100% {
+    background-position: -512px 0;
+  }
+}
+@-o-keyframes walk {
+  100% {
+    background-position: -512px 0;
+  }
+}
+@keyframes walkback {
+  100% {
+    background-position: -512px -576px;
+  }
+}
+@-moz-keyframes walkback {
+  100% {
+    background-position: -512px -576px;
+  }
+}
+@-webkit-keyframes walkback {
+  100% {
+    background-position: -512px -576px;
+  }
+}
+@-o-keyframes walkback {
+  100% {
+    background-position: -512px -576px;
+  }
+}
+@keyframes road {
+  100% {
+    background-position: center 100%;
+  }
+}
+@-moz-keyframes road {
+  100% {
+    background-position: center 100%;
+  }
+}
+@-webkit-keyframes road {
+  100% {
+    background-position: center 100%;
+  }
+}
+@-o-keyframes road {
+  100% {
+    background-position: center 100%;
+  }
+}
+@keyframes fly {
+  100% {
+    background-position: -600%;
+  }
+}
+@-moz-keyframes fly {
+  100% {
+    background-position: -600%;
+  }
+}
+@-webkit-keyframes fly {
+  100% {
+    background-position: -600%;
+  }
+}
+@-o-keyframes fly {
+  100% {
+    background-position: -600%;
+  }
+}
